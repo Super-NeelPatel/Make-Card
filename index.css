@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -19,7 +21,7 @@ body {
 }
 
 .left-bar {
-  background-color: rgb(255, 217, 163);
+  /* background-color: rgb(255, 217, 163); */
   background-color: rgb(255, 190, 99);
   height: 100%;
   width: 20%;
@@ -27,6 +29,10 @@ body {
   justify-content: center;
   align-items: center;
   border-right: 2px solid white;
+
+  background: linear-gradient(to bottom, #e9e4f0, #b89bfc);
+
+  background: linear-gradient(to bottom, #ffd194, #ffb95e);
 }
 
 .form-container {
@@ -40,7 +46,7 @@ body {
 
 .input-title,
 .input-description {
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 8px 8px;
   font-size: 14px;
   width: 100%;
@@ -56,9 +62,20 @@ textarea {
 }
 
 .form-container button {
-  height: 30px;
-  width: 80%;
+  height: 40px;
+  width: 50%;
   margin-top: 20px;
+  padding: 8px 8px;
+  border-radius: 20px;
+  background-color: #e98400;
+  border-color: white;
+  color: white;
+  font-size: 16px;
+  border: none;
+}
+.form-container button:hover {
+  box-shadow: 0px 0px 10px 1px white;
+  border: white;
 }
 
 .right-side {
@@ -70,19 +87,22 @@ textarea {
   justify-content: space-around;
   align-items: center;
   height: 10%;
-  background-color: violet;
+  background-color: rgb(255, 207, 139);
   border-bottom: 2px solid white;
+  /* background: linear-gradient(to top, #cfaffc, #d3c0ff); */
 }
 
 .title {
   font-size: 40px;
   color: white;
   margin: 0;
+  font-family: "Lobster", sans-serif;
 }
 .stats {
   text-align: right;
   display: inline-block;
-  font-size: 24px;
+  font-size: 30px;
+  color: rgb(156, 91, 0);
 }
 
 .list {
@@ -90,7 +110,8 @@ textarea {
   color: rgb(125, 125, 125);
   overflow-y: scroll;
   width: 100%;
-  background-color: rgb(248, 248, 248);
+  background-color: rgb(229, 229, 229);
+  background-color: rgb(229, 229, 229);
 }
 li {
   list-style: none;
@@ -115,12 +136,13 @@ li {
   width: 350px;
   gap: 20px;
   flex-direction: column;
-  background-color: white;
+  background-color: #f7f7f7;
+  background-color: rgb(254, 248, 243);
   justify-content: space-around;
   align-items: center;
   padding: 12px;
   border-radius: 20px;
-  box-shadow: 10px 15px 5px 0px rgba(181, 181, 181, 0.336);
+  box-shadow: 20px 15px 5px 0px rgba(181, 181, 181, 0.336);
 
   transition: 0.2s;
   cursor: default;
@@ -192,4 +214,8 @@ li {
 .emoji-container span:hover {
   transform: scale(1.2);
   cursor: pointer;
+}
+.selected-emoji {
+  font-size: 25px;
+  text-shadow: 0px 0px 20px white;
 }

@@ -72,6 +72,7 @@ export default function App() {
       setImgSrc(null);
       setDescription("");
       setTitle("");
+      setEmoji("😃");
       console.log(title, description, imgSrc);
     }
   }
@@ -87,6 +88,7 @@ export default function App() {
           setEmoji={setEmoji}
           getImgUrl={getImgUrl}
           handleAddItem={handleAddItem}
+          emoji={emoji}
         />
       </div>
       <div className="right-side">
@@ -110,6 +112,7 @@ function LeftSide({
   handleAddItem,
   title,
   description,
+  emoji,
 }) {
   return (
     <Form
@@ -120,6 +123,7 @@ function LeftSide({
       handleAddItem={handleAddItem}
       title={title}
       description={description}
+      emoji={emoji}
     />
   );
 }
@@ -132,6 +136,7 @@ function Form({
   handleAddItem,
   title,
   description,
+  emoji,
 }) {
   return (
     <div
@@ -206,6 +211,7 @@ function Form({
           🥺
         </span>
       </div>
+      <span className="selected-emoji">{emoji}</span>
       <button onClick={handleAddItem}>Make Card</button>
     </div>
   );
@@ -231,8 +237,8 @@ function RightSide({ list, title, description, imgSrc, date, emoji }) {
 function TitleAndStats({ list }) {
   return (
     <div className="title-container">
-      <p>Empty</p>
-      <p className="title">My Gallary</p>
+      <p></p>
+      <p className="title">Neel's Gallary</p>
       <p className="stats">{list.length} cards</p>
     </div>
   );
